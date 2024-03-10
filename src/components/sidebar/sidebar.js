@@ -14,11 +14,7 @@ function Sidebar() {
   const isSidebarOn = useSelector(getSidebarStatus)
   // const isSidebarOn = false
   console.log("isSidebarOn is : ", isSidebarOn);
-  const hide = false
 
-  const hideAside = () => {
-    document.getElementsByClassName('.my-aside').className.add("hide-aside")
-  }
   return (
     <>
       {/* <aside className={isSidebarOn ? 'sidebar' : 'sidebar hide-sidebar'}>
