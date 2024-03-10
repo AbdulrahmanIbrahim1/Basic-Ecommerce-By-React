@@ -4,12 +4,17 @@
   "homepage": "https://AbdulrahmanIbrahim1.github.io/Basic-Ecommerce-By-React",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^3.5.2"
   },
   "scripts": {
@@ -18,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

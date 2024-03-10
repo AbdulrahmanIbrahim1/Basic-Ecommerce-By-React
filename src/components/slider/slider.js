@@ -1,33 +1,39 @@
-import image1 from '../images/image-1.webp'
-import image2 from '../images/image-2.png'
-import image3 from '../images/image-3.webp'
-import './slider.css'
-function Slider() {
+//for slider from react-slick
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Container } from "react-bootstrap";
+import { sliderImgs } from "../../utils/images";
+
+function Myslider() {
+  let settings = {
+    autoplay: true,
+    autoplayspeed: 3000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
     <>
-      <div id="carouselExample" className="carousel slide">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={image1} className="d-block w-100 height-90vh" alt="..." />
+      <div className="slider">
+        <Container >
+          <div>
+            <Slider {...settings}>
+              <div className="slider-item">
+                <img src={sliderImgs[0]} className="img-fluid" alt="" />
+              </div>
+              <div className="slider-item">
+                <img src={sliderImgs[1]} className="img-fluid" alt="" />
+              </div>
+            </Slider>
           </div>
-          <div className="carousel-item">
-            <img src={image2} className="d-block w-100 height-90vh" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={image3} className="d-block w-100 height-90vh" alt="..." />
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+        </Container>
       </div>
     </>
-  );
+  )
 }
 
-export default Slider;
+export default Myslider;
